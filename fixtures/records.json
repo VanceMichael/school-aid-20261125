@@ -1,0 +1,154 @@
+{
+  "schools": [
+    {
+      "id": "SCH-A",
+      "name": "合成小学甲"
+    },
+    {
+      "id": "SCH-B",
+      "name": "合成小学乙"
+    }
+  ],
+  "needs": [
+    {
+      "id": "ND-1",
+      "school": "SCH-A",
+      "kind": "winter-coat",
+      "size": "140",
+      "quantity": 12
+    },
+    {
+      "id": "ND-2",
+      "school": "SCH-A",
+      "kind": "winter-coat",
+      "size": "150",
+      "quantity": 8
+    },
+    {
+      "id": "ND-3",
+      "school": "SCH-B",
+      "kind": "stationery",
+      "quantity": 20
+    }
+  ],
+  "donors": [
+    {
+      "id": "DN-A",
+      "scope": [
+        "SCH-A"
+      ],
+      "purposes": [
+        "winter-coat"
+      ]
+    },
+    {
+      "id": "DN-B",
+      "scope": [
+        "SCH-A",
+        "SCH-B"
+      ],
+      "purposes": [
+        "stationery"
+      ]
+    }
+  ],
+  "pledgeDrafts": [
+    {
+      "id": "PL-1",
+      "donor": "DN-A",
+      "need": "ND-1",
+      "amountMinor": 120000
+    }
+  ],
+  "matchingRules": [
+    {
+      "id": "MATCH-1",
+      "donor": "DN-A",
+      "ratio": "0.5",
+      "capMinor": 50000,
+      "deadline": "2026-12-01T00:00:00Z"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "SKU-140",
+      "kind": "winter-coat",
+      "size": "140",
+      "unitMinor": 10000
+    },
+    {
+      "id": "SKU-150",
+      "kind": "winter-coat",
+      "size": "150",
+      "unitMinor": 11000
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "DEL-1",
+      "school": "SCH-A",
+      "sku": "SKU-140",
+      "quantity": 6,
+      "waybill": "WAY-1"
+    }
+  ],
+  "actors": [
+    {
+      "id": "school-a",
+      "role": "school",
+      "school": "SCH-A"
+    },
+    {
+      "id": "verifier",
+      "role": "verifier"
+    },
+    {
+      "id": "approver",
+      "role": "approver"
+    },
+    {
+      "id": "buyer",
+      "role": "buyer"
+    },
+    {
+      "id": "donor-a",
+      "role": "donor",
+      "donor": "DN-A"
+    }
+  ],
+  "sourceChanges": [
+    {
+      "id": "NEED-REDUCE",
+      "need": "ND-1",
+      "quantity": 8,
+      "school": "SCH-A"
+    },
+    {
+      "id": "DONOR-RETURN",
+      "pledge": "PL-1",
+      "amountMinor": 40000,
+      "donor": "DN-A"
+    },
+    {
+      "id": "ARRIVAL-1",
+      "delivery": "DEL-1",
+      "received": 6,
+      "usable": 4,
+      "reason": "两件尺码不符"
+    },
+    {
+      "id": "SUBSTITUTE-1",
+      "need": "ND-1",
+      "sku": "SKU-150",
+      "quantity": 2,
+      "schoolConsent": "pending",
+      "donorConsent": "pending"
+    },
+    {
+      "id": "GOODS-RETURN",
+      "delivery": "DEL-1",
+      "quantity": 2,
+      "warehouseConfirmed": false
+    }
+  ]
+}

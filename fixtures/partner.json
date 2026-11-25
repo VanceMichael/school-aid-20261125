@@ -1,0 +1,14 @@
+{
+  "name": "采购结款方",
+  "path": "/purchase/payments",
+  "lookup": "/purchase/payments/",
+  "id": "purchasePayment",
+  "group": "orders",
+  "key": "Purchase-Key",
+  "modes": [
+    "accepted",
+    "rejected",
+    "accepted_disconnect",
+    "pending"
+  ]
+}

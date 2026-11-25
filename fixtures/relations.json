@@ -1,0 +1,38 @@
+[
+  {
+    "table": "needs",
+    "field": "school",
+    "target": "schools",
+    "nullable": false
+  },
+  {
+    "table": "pledgeDrafts",
+    "field": "donor",
+    "target": "donors",
+    "nullable": false
+  },
+  {
+    "table": "pledgeDrafts",
+    "field": "need",
+    "target": "needs",
+    "nullable": false
+  },
+  {
+    "table": "matchingRules",
+    "field": "donor",
+    "target": "donors",
+    "nullable": false
+  },
+  {
+    "table": "deliveries",
+    "field": "school",
+    "target": "schools",
+    "nullable": false
+  },
+  {
+    "table": "deliveries",
+    "field": "sku",
+    "target": "catalog",
+    "nullable": false
+  }
+]
